@@ -1,0 +1,140 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>Snake</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#f3f3f3;
+}
+td{
+    height:.8em;
+    width:.7em;
+    border:.1em solid #bbb;
+    background-color: #fff;
+}
+.map{
+    padding-top:2%;
+    height:19em;
+    width:19em;
+    margin:0 auto;
+}
+ul{
+    list-style: none;
+    font-family: "微软雅黑";
+}
+h2{
+    color: #FF7F00;
+    float: right;
+}
+.first{
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-weight: bold;
+    margin-bottom: .1em;
+}
+.second{
+    font-size: 1.4em;
+    line-height: 1.4em;
+    font-weight: bold;
+    margin-bottom: .2em;
+}
+.third{
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-weight: bold;
+    margin-bottom: .3em;
+}
+.four{
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-bottom: .4em;
+}
+.five{
+    font-size: 1em;
+    line-height: 1em;
+    margin-bottom: .5em;
+}
+.aLine{
+    width:18em;
+    margin: 0 auto;
+    margin-top: .5em;
+}
+.aLine input{
+    width: 4em;
+    height: 4em;
+    font-size:1.4em;
+    font-weight:bold;
+    font-family: "微软雅黑";
+    background:#BFEFFF;
+    border: .15em solid #ccc;
+    box-shadow: 0 0 .2em #ccc;
+    border-radius:2em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: .2em;
+    display: inline-block;
+}
+.otherLine{
+    width: 19em;
+}
+.otherLine input{
+    width: 4em;
+    height: 4em;
+    font-size:1.4em;
+    font-weight:bold;
+    font-family: "微软雅黑";
+    background:#BFEFFF;
+    border: .15em solid #ccc;
+    box-shadow: 0 0 .2em #ccc;
+    border-radius:2em;
+    display: inline-block;
+}
+#score{
+    background: #EE3B3B;
+    color: #ddd;
+}
+.aLine .start{
+    background: #9B30FF;
+    color: #eee;
+}
+</style>
+<script src="snake-script.js"></script>
+</head>
+<body>
+    <div class="map">
+        <!-- > <ul class="rank">
+            <li>..Rank..</li>
+            <li class="first">第一名..还没有。。<h2 id="one">0</h2></li>
+            <li class="second">第二名..还没有。。<h2 id="2">0</h2></li>
+            <li class="third">第三名..还没有。。<h2 id="3">0</h2></li>
+            <li class="four">第四名..还没有。。<h2 id="4">0</h2></li>
+            <li class="five">四五名..还没有。。<h2 id="5">0</h2></li>
+        </ul><!-->
+        <script>
+            makeMap();
+            init();
+            showView();
+        </script>
+        <div class="aLine">
+            <input type="input" value="0" disabled="false" id="score" />
+            <input type="button" value="▲" onclick="getTouch(38)">
+            <input type="button" value="start" class="start" onclick="run();"/>
+            <div class="otherLine">
+            <input type="button" value="◀" onclick="getTouch(37)">
+            <input type="button" value="▼" onclick="getTouch(40)">
+            <input type="button" value="▶" onclick="getTouch(39)">
+        </div>
+        </div>
+    </div>
+</body>
+<script> 
+alert("手机玩家点击屏幕按钮~\n电脑用户按上下左右或者WASD或者按钮\nHappy~");
+</script>
+</html>
